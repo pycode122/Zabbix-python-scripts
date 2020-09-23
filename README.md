@@ -1,2 +1,2 @@
 # Zabbix-python-scripts
-A collection of various scripts to automate tasks with the Zabbix Python API. 
+A collection of scripts to automate Zabbix Administration tasks using Python. 
