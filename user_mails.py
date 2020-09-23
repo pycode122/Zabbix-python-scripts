@@ -1,7 +1,7 @@
 
-############## Users added in zabbix with the required mail(users media) extension###########
+############## Users added in zabbix with the required mail(users media) domains ###########
 
-###in this example I am retriving for @sap.com############
+###in this example I am retriving for @gmail.com############
 
 
 f0rom pyzabbix import ZabbixAPI
@@ -28,7 +28,7 @@ users = zapi.user.get(output=['userid','alias'])
 for u in users: 
 	usermedia = zapi.usermedia.get(userids=u['userid'],output=['sendto','active'])
 	for i in usermedia:
-		if re.search ('.*\@sap.com',i['sendto']):
+		if re.search ('.*\@gmail.com',i['sendto']): #regex search performing Email domain check
 			print ()
 			print ("Email :",i['sendto']," ---- ZabbixUser:",u['alias'])
 			
